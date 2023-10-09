@@ -1,7 +1,7 @@
 import random
 liczba = random.randint(1, 10)
 
-x = input("podaj liczbę: ")
+x = int(input("podaj liczbę: "))
 
 
 if liczba == int(x):
