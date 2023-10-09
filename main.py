@@ -1,8 +1,13 @@
+import sys
 import random
+i = 3
 liczba = random.randint(1, 10)
+print("masz 3 szanse :)")
+x = int(input("podaj liczbę naturalną: "))
 
-x = int(input("podaj liczbę: "))
-
+if x == 0 :
+    print("bruh")
+    sys.exit(0)
 
 if liczba == int(x):
     print("wygrałeś")
