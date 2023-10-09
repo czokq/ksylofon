@@ -3,7 +3,7 @@ import random
 
 liczba_szans = 3
 
-while (liczba_szans):
+while liczba_szans > 0:
     liczba = random.randint(1, 10)
     print(f"Masz {liczba_szans} szanse :)")
     x = int(input("Podaj liczbę naturalną: "))
