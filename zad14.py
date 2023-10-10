@@ -24,4 +24,4 @@ else:
     elif delta == 0:
         print('x ='+ str(-b / (2 * a)))
     else:
-        print('sprzecze')
+        print('sprzecz')
