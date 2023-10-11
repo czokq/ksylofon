@@ -20,4 +20,4 @@ while liczba_szans > 0:
 
     liczba_szans -= 1
 
-print("Ukrytą liczbą była:", liczba)
+print("Ukrytą liczbą była:", liczba)#
