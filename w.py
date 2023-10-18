@@ -1,8 +1,11 @@
 import sys
 import random
+import time
 
 liczba_szans = 3
 liczba = random.randint(1, 10)
+print("grasz o 20psc i lipton brzoskwinia :)")
+time.sleep(2)
 while liczba_szans > 0:
 
     print(f"Masz {liczba_szans} szanse :)")
@@ -13,7 +16,7 @@ while liczba_szans > 0:
 
 
     if liczba == x:
-        print("Wygrałeś")
+        print("brawo!!!! Wygrałeś")
         break
     else:
         print("Przegrałeś")
