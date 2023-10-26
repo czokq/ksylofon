@@ -25,3 +25,4 @@ else:
         print('x ='+ str(-b / (2 * a)))
     else:
         print('sprzecze')
+#
