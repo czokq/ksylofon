@@ -1,6 +1,7 @@
 import random
 import time
 
+
 liczba_szans = 3        #ilość szans
 liczba = random.randint(1, 10)  #losuje liczbe od 1 do 10
 print("grasz o 20psc i lipton brzoskwinia :)") # wygrana
