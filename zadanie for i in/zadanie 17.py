@@ -1,7 +1,7 @@
 n = int(input("podaj ile ma byc liczb: "))
 suma = 0
 iloczyn = 1
-licznik = 0
+licznik = 0#
 licznik2 = 0
 max_liczba = float(input("podaj liczbe nr 1: "))
 min_liczba = max_liczba
