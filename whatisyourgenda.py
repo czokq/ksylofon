@@ -1,13 +1,13 @@
 import tkinter as tk
 
 def submit():
-    cm = entry.get()
-    label.config(text="twoj wzrost to: " + cm)
+    gender = entry.get()
+    label.config(text="Your gender is: " + gender)
 
 window = tk.Tk()
-window.title("ile cm bratku?")
+window.title("Gender Input Program")
 
-label = tk.Label(window, text="wprowadz wzrost:")
+label = tk.Label(window, text="Enter your gender:")
 label.pack()
 
 entry = tk.Entry(window)
