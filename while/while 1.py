@@ -1,33 +1,34 @@
-import time
-uzytkownicy = {
-        "admin": "admin",
-        "user": "1234",
-        "user1": "1234"
-    }
-x = 3
-d = 1
-w = 5
-username = input("Podaj nazwę użytkownika: ")
-while x > 0:
-    password = input("Podaj hasło: ")
-    if username in uzytkownicy and password == uzytkownicy[username]:
-        print("Zalogowano pomyślnie!")
-        break
-    else:
-        print("Błędna nazwa użytkownika lub hasło.")
-        print("zostało ci {} próby".format(x - 1))
-        x = x - 1
-        if x == 0:
-            print("podałeś 3 razy błednie hasło masz blokade na {}sekund".format(w))
-            time.sleep(w)
-            x = x + 1
-            w = w * 2
-            if username in uzytkownicy and password == uzytkownicy[username]:
-                print("Zalogowano pomyślnie!")
-                break
+import tkinter as tk
+from tkinter import ttk
 
+# Function to update the label
+def update_label():
+    label.config(text="Hello, " + name_entry.get())
 
+# Create the main window
+root = tk.Tk()
+root.title("Advanced Tkinter GUI")
 
+# Style configuration
+style = ttk.Style()
+style.configure("TButton", font=("Sans Serif", 12), padding=10)
+style.configure("TLabel", font=("Sans Serif", 14), background="lightblue")
+style.configure("TEntry", font=("Sans Serif", 12), padding=10)
 
+# Label
+label = ttk.Label(root, text="Enter your name:", background="lightblue")
+label.pack(padx=20, pady=10)
 
+# Entry field
+name_entry = ttk.Entry(root, font=("Sans Serif", 12), width=20)
+name_entry.pack(padx=20, pady=10)
 
+# Button
+greet_button = ttk.Button(root, text="Greet", command=update_label)
+greet_button.pack(padx=20, pady=10)
+
+# Set the geometry
+root.geometry("300x200")
+
+# Start the GUI loop
+root.mainloop()
