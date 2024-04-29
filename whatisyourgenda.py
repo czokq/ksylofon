@@ -1,22 +1,30 @@
-import tkinter as tk
+const int trigPin = 2;
+const int echoPin = 3;
 
-def submit():
-    gender = entry.get()
-    label.config(text="Your gender is: " + gender)
+void setup() {
+  Serial.begin(9600);
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
 
-window = tk.Tk()
-window.title("Gender Input Program")
+void loop() {
+  long czasTrwania = pomiarOdleglosci();
+  float odleglosc = czasDoOdleglosci(czasTrwania);
+  Serial.print("Odleglosc: ");
+  Serial.print(odleglosc);
+  Serial.println(" cm");
+  delay(1000); // opóźnienie między pomiarami
+}
 
-label = tk.Label(window, text="Enter your gender:")
-label.pack()
+long pomiarOdleglosci() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  return pulseIn(echoPin, HIGH);
+}
 
-entry = tk.Entry(window)
-entry.pack()
-
-button = tk.Button(window, text="Submit", command=submit)
-button.pack()
-
-output_label = tk.Label(window, text="")
-output_label.pack()
-
-window.mainloop()
+float czasDoOdleglosci(long czas) {
+  return static_cast<float>(czas) / 58.0f;
+}
